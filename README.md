@@ -19,7 +19,7 @@ The task scheduling codes are based on one of two libraries, IO_Abstraction and 
 
 There are two examples, one of which has an added LED to show the result of the input.
 
-TCRT5000_Terry - basic example
+TCRT5000_Terry - basic example  
 TCRT5000_LED   - add external LED
 
 ## IO_Abstraction
