@@ -26,7 +26,7 @@ TCRT5000_LED   - add external LED
 
 There are two examples.
 
-TCRT5000_IOAbs_Callback - simple callback 
+TCRT5000_IOAbs_Callback - simple callback  
 TCRT5000_IOAbs_Cb3      - callback using class
 
 The second method makes it possible to have more than one task in the same code.
@@ -36,5 +36,13 @@ The second method makes it possible to have more than one task in the same code.
 There is one example. I have focussed on IO_Abstraction for further work and have not developed this example.
 
 TCRT5000_FreeRTOS
+
+## Requirements
+
+All of these examples will run on an Arduino UNO. There is a need for a TCRT5000 IR detector and connecting wiring.
+
+The Task scheduling examples require the libraries as indicated which are available from the Arduino IDE.
+
+Library documentation is available from the links on the Knowledgebase.
 
 **John Fletcher (M6777)**
