@@ -45,4 +45,8 @@ The Task scheduling examples require the libraries as indicated which are availa
 
 Library documentation is available from the links on the Knowledgebase.
 
+## Location
+
+The local files are located at E:\GitHub\Arduino\Arduino-IR-Task
+
 **John Fletcher (M6777)**
