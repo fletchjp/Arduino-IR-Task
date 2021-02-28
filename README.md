@@ -33,6 +33,8 @@ The second method makes it possible to have more than one task in the same code.
 
 ## FreeRTOS
 
-There is one example. I have focussed on IO_Abstraction for further work and not developed this example.
+There is one example. I have focussed on IO_Abstraction for further work and have not developed this example.
+
+TCRT5000_FreeRTOS
 
 John Fletcher (M6777)
