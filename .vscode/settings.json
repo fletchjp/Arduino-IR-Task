@@ -1,4 +1,5 @@
 {
-	"arduino.commandPath": "E:\\Program Files (x86)\\Arduino",
-	"arduino.additionalUrls": ""
+	"arduino.path": "E:\\Program Files (x86)\\Arduino",
+    "arduino.commandPath": "arduino_debug.exe",
+	"arduino.additionalUrls": "C:\\Users\\User\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.3\\**"
 }
