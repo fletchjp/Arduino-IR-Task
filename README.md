@@ -33,11 +33,19 @@ TCRT5000_IOAbs_Cb3      - callback using class
 
 The second method makes it possible to have more than one task in the same code.
 
+I have since made a lot of use of IoAbstraction. I have found a lot of different ways to use it, some of which are not clearly explained in the documentation. I have now some cases which use several different tasks.
+
+It makes it easy to do things without having to set a lot of parameters. This may be a limitation for large systems which make a heavy use of the CPU as there is no priority scheme.
+
+It is for this reason that I want to explore some alternatives.
+
 ## FreeRTOS
 
 There is one example. I have focussed on IO_Abstraction for further work and have not developed this example.
 
 TCRT5000_FreeRTOS
+
+I have now had a further look at FreeRTOS as I wanted to compare its use with work I have been doing with IoAbstraction. I have not for example found a way to do the callbacks and class structure which are available in IoAbstraction.
 
 ## Requirements
 
