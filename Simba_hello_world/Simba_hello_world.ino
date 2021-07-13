@@ -37,5 +37,9 @@ int main()
 
     std_printf(FSTR("Hello world!\r\n"));
 
+    std_printf(FSTR("PIN_OUTPUT = %d\r\n"),PIN_OUTPUT);
+
+    std_printf(FSTR("PIN_INPUT = %d\r\n"),PIN_INPUT);
+
     return (0);
 }
