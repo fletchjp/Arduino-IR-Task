@@ -44,8 +44,8 @@ void TaskDigitalRead( void *pvParameters __attribute__((unused)) )  // This is a
  for (;;) // A Task shall never return or exit.
  {
   ir_signal = digitalRead(Signal_Pin);
-  Serial.println(ir_signal);
   if (ir_signal != previous_signal) {
+    Serial.println(ir_signal);
     previous_signal = ir_signal;
     // Changes to save some code.
     digitalWrite(LED_Pin, !ir_signal);
