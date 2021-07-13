@@ -13,7 +13,7 @@ void TaskDigitalRead( void *pvParameters );
 // The IR signal is pulled high and goes low when there is a detection.
 const int Signal_Pin = 5;
 const int IR_Pin = 6;
-const int LED_Pin = 7;
+const int LED_Pin = 13;
 
 int ir_signal = 0;
 int previous_signal = -1;
