@@ -49,7 +49,7 @@ I have now had a further look at FreeRTOS as I wanted to compare its use with wo
 
 ## Simba
 
-I started to look at Simba and I have now stopped as the current version 15 does not support PIN_INPUT_PULL_UP which is needed for my code.
+I started to look at Simba and I have now stopped as the current version 15 does not support PIN_INPUT_PULL_UP which is needed for my code. This turns out to be a mysterious error where the wrong version of the source code is being picked up.
 
 ## Requirements
 
