@@ -34,12 +34,17 @@ int main()
 {
     /* Start the system. */
     sys_start();
+    pin_module_init();
 
     std_printf(FSTR("Hello world!\r\n"));
 
     std_printf(FSTR("PIN_OUTPUT = %d\r\n"),PIN_OUTPUT);
 
     std_printf(FSTR("PIN_INPUT = %d\r\n"),PIN_INPUT);
+
+    // This needs an argument of type str_p - pin as string.
+    // I cannot find the definition!
+    //int what = board_pin_string_to_device_index(pin_d5_dev.str_p() );
 
     return (0);
 }
