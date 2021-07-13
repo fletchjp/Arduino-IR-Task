@@ -47,6 +47,10 @@ TCRT5000_FreeRTOS
 
 I have now had a further look at FreeRTOS as I wanted to compare its use with work I have been doing with IoAbstraction. I have not for example found a way to do the callbacks and class structure which are available in IoAbstraction.
 
+## Simba
+
+I started to look at Simba and I have now stopped as the current version 15 does not support PIN_INPUT_PULL_UP which is needed for my code.
+
 ## Requirements
 
 All of these examples will run on an Arduino UNO. There is a need for a TCRT5000 IR detector and connecting wiring.
