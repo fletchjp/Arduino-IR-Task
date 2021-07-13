@@ -38,6 +38,11 @@
 #include "simba.h"
 
 // This should be defined internally - why is it not?
+// I have now established that PIN_INPUT_PULL_UP has been dropped from Simba
+// at some time between version 10 and version 15 (the current one).
+// I cannot see any way of implementing the pullup without changing my hardware.
+// I have logged this as a problem with Simba on GitHub.
+// It looks as though the level of maintenance is low for Simba so I am going to stop using it.
 //#define PIN_INPUT_PULL_UP                                   4
 
 int main()
