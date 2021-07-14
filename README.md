@@ -51,6 +51,8 @@ I have now had a further look at FreeRTOS as I wanted to compare its use with wo
 
 I started to look at Simba and I have now stopped as the current version 15 does not support PIN_INPUT_PULL_UP which is needed for my code. This turns out to be a mysterious error where the wrong version of the source code is being picked up.
 
+I have downloaded the correct files. However the file structure is different so that I cannot just drop them in. I will keep the files and stop this development.
+
 ## Requirements
 
 All of these examples will run on an Arduino UNO. There is a need for a TCRT5000 IR detector and connecting wiring.
