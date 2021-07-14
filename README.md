@@ -17,6 +17,8 @@ https://www.merg.org.uk/merg_wiki/doku.php?id=arduino:codeing:scheduling
 
 The task scheduling codes are based on one of two libraries, IO_Abstraction and FreeRTOS. Information on these is available from the link above.
 
+It has been good to revisit these codes after some time away and get the hardware of the examples operational again.
+
 ## No scheduling
 
 There are two examples, one of which has an added LED to show the result of the input.
