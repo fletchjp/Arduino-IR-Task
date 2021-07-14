@@ -1,3 +1,15 @@
+ // I am not pursuing this example.
+ // The Arduino board management installs an incorrect version of the Simba code.
+ // Although I can find and download the correct version it is structured differently
+ // so that it is not a direct drop in.
+ // This means that it will be a lot of work to get the correct installation.
+ // My request for help was met with this response.
+ /*
+ It was likely a very long time since the latest Simba release for Arduino.
+ As the interest has been close to zero for Simba on Arduino, and Simba in general,
+ I don't put more time into the project at the moment. Sorry.
+ */
+ 
  /**
  * @section License
  *
