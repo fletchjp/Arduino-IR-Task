@@ -55,6 +55,8 @@ I started to look at Simba and I have now stopped as the current version 15 does
 
 I have downloaded the correct files. However the file structure is different so that I cannot just drop them in. I will keep the files and stop this development.
 
+I raised a query on this and the originator was too busy to respond and deleted my query.
+
 ## Requirements
 
 All of these examples will run on an Arduino UNO. There is a need for a TCRT5000 IR detector and connecting wiring.
