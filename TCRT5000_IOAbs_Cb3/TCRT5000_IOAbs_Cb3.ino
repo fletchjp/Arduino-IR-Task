@@ -4,10 +4,10 @@
 /// IR detector circuit
 /// It has an LED to indicate that a detection has been made.
 /// (c) John Fletcher (M6777)
-
+///
 /// This version is adapted from an IoAbstraction example
 /// exampleDirect with taskmanager additions.
-//
+///
 /// Extended to use a class for the executable task.
 /// This makes it possible to have more than one detector.
 ///
