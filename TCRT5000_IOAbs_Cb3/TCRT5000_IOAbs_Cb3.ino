@@ -1,3 +1,5 @@
+// @file TCRT5000_IOAbs_Cb3
+///
 /// TCRT5000_IOAbs_Cb3
 /// IR detector circuit
 /// It has an LED to indicate that a detection has been made.
@@ -13,10 +15,12 @@
 ///
 /// This compiles on UNO and also DUE.
 
+/// @section Program
 
 #include <IoAbstraction.h>
 #include <TaskManagerIO.h>
 
+/// arduinoPins is using part of IoAbstraction
 IoAbstractionRef arduinoPins = ioUsingArduino();
 
 /// The IR signal is pulled high and goes low when there is a detection.
