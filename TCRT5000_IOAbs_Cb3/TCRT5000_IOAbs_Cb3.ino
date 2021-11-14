@@ -14,8 +14,6 @@
 ///
 /// This compiles on UNO and also DUE.
 
-/// @section Program
-
 #include <IoAbstraction.h>
 #include <TaskManagerIO.h>
 
