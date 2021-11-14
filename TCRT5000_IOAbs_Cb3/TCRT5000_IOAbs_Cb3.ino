@@ -1,17 +1,17 @@
-// TCRT5000_IOAbs_Cb3
-// IR detector circuit
-// It has an LED to indicate that a detection has been made.
-// (c) John Fletcher (M6777)
+/// TCRT5000_IOAbs_Cb3
+/// IR detector circuit
+/// It has an LED to indicate that a detection has been made.
+/// (c) John Fletcher (M6777)
 
-// This version is adapted from an IoAbstraction example
-// exampleDirect with taskmanager additions.
+/// This version is adapted from an IoAbstraction example
+/// exampleDirect with taskmanager additions.
 //
-// Extend to look use a class for the executable task.
-// This makes it possible to have more than one detector.
-//
-// https://www.thecoderscorner.com/products/arduino-libraries/io-abstraction/
-//
-// This compiles on UNO and also DUE.
+/// Extended to use a class for the executable task.
+/// This makes it possible to have more than one detector.
+///
+/// https://www.thecoderscorner.com/products/arduino-libraries/io-abstraction/
+///
+/// This compiles on UNO and also DUE.
 
 
 #include <IoAbstraction.h>
@@ -19,11 +19,12 @@
 
 IoAbstractionRef arduinoPins = ioUsingArduino();
 
-// The IR signal is pulled high and goes low when there is a detection.
+/// The IR signal is pulled high and goes low when there is a detection.
 const int Signal_Pin = 5;
 const int IR_Pin = 6;
 const int LED_Pin = 7;
 
+/// CheckIRpins implements checking on the pins.
 class CheckIRpins : public Executable {
    private:
      int sig_pin;
@@ -43,13 +44,14 @@ class CheckIRpins : public Executable {
      }
 };
 
-// Class instance - this could be used to check different sets of pins.
+/// Class instance - this could be used to check different sets of pins.
 CheckIRpins checkThesePins(Signal_Pin, LED_Pin);
 
-// NOTE: I have made the instance declaration global which is what the documentation implies.
-// Examples did work with the declaration inside setup() which should have gone out of scope.
-// I can only assume that the memory location had not been overwritten.
+/// NOTE: I have made the instance declaration global which is what the documentation implies.
+/// Examples did work with the declaration inside setup() which should have gone out of scope.
+/// I can only assume that the memory location had not been overwritten.
 
+/// Arduino setup routine runs once.
 void setup() {
   Serial.begin(9600);
 
@@ -60,11 +62,12 @@ void setup() {
   ioDeviceDigitalWrite(arduinoPins, IR_Pin, HIGH);
   ioDeviceDigitalWrite(arduinoPins, LED_Pin, LOW);
 
-  // Class instance is scheduled - note the & before the name to indicate "address of"
+  /// Class instance is scheduled - note the & before the name to indicate "address of"
   taskManager.scheduleFixedRate(250, &checkThesePins);
-  //This could be repeated with different instances to check different sets of pins.
+  ///This could be repeated with different instances to check different sets of pins.
 }
 
+/// Arduino loop() function has only to run the taskManage.runLoop()
 void loop() {
   taskManager.runLoop();
 }
