@@ -1,7 +1,6 @@
-// @file TCRT5000_IOAbs_Cb3
+/// @file TCRT5000_IOAbs_Cb3.ino
+/// @brief TCRT5000_IOAbs_Cb3 IR detector circuit code 
 ///
-/// TCRT5000_IOAbs_Cb3
-/// IR detector circuit
 /// It has an LED to indicate that a detection has been made.
 /// (c) John Fletcher (M6777)
 ///
