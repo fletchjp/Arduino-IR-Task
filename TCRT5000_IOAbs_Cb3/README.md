@@ -1,6 +1,6 @@
-# TCRT500_IOAbs_Cb3
-
 @mainpage TCRT500_IOAbs_Cb3
+
+# TCRT500_IOAbs_Cb3
 
 @section description An example of IOAbs callback using a class.
 
