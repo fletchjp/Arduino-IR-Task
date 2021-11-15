@@ -1,6 +1,6 @@
 @mainpage TCRT500_IOAbs_Cb3
 
-# TCRT500_IOAbs_Cb3
+## TCRT500_IOAbs_Cb3
 
 @section description An example of IOAbs callback using a class.
 
@@ -10,7 +10,7 @@ The advantage of using the class is that several copies of the same operation ca
 
 @author John Fletcher (john@bunbury28.plus.com)
 
-## Description from the top of the program file.
+### Description from the top of the program file.
 
 TCRT5000_IOAbs_Cb3  
 IR detector circuit  
