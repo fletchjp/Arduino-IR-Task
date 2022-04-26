@@ -19,7 +19,7 @@ int ir_signal = 0;
 int previous_signal = -1;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   // put your setup code here, to run once:
   pinMode(Signal_Pin, INPUT_PULLUP);
   pinMode(IR_Pin, OUTPUT);                                                                                                                                        // with 330R
