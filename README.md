@@ -57,7 +57,7 @@ I have downloaded the correct files. However the file structure is different so 
 
 I raised a query on this and the originator was too busy to respond and deleted my query.
 
-I therefore abandoned all work on Simba and have deleted its files.
+I therefore abandoned all work on Simba and have deleted its files and the examples here.
 
 ## Requirements
 
