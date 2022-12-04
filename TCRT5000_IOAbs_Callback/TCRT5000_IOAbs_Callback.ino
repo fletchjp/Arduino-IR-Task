@@ -9,7 +9,7 @@
 // https://www.thecoderscorner.com/products/arduino-libraries/io-abstraction/
 //
 // This compiles on UNO and also DUE.
-
+// It also compiles on a PICO - I have not checked that the pin numbers are correct.
 
 #include <IoAbstraction.h>
 #include <TaskManagerIO.h>
