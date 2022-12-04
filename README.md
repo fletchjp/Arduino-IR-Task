@@ -57,6 +57,8 @@ I have downloaded the correct files. However the file structure is different so 
 
 I raised a query on this and the originator was too busy to respond and deleted my query.
 
+I therefore abandoned all work on Simba and have deleted its files.
+
 ## Requirements
 
 All of these examples will run on an Arduino UNO. There is a need for a TCRT5000 IR detector and connecting wiring.
