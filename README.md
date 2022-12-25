@@ -49,15 +49,7 @@ TCRT5000_FreeRTOS
 
 I have now had a further look at FreeRTOS as I wanted to compare its use with work I have been doing with IoAbstraction. I have not for example found a way to do the callbacks and class structure which are available in IoAbstraction.
 
-## Simba
 
-I started to look at Simba and I have now stopped as the current version 15 does not support PIN_INPUT_PULL_UP which is needed for my code. This turns out to be a mysterious error where the wrong version of the source code is being picked up.
-
-I have downloaded the correct files. However the file structure is different so that I cannot just drop them in. I will keep the files and stop this development.
-
-I raised a query on this and the originator was too busy to respond and deleted my query.
-
-I therefore abandoned all work on Simba and have deleted its files and the examples here.
 
 ## Requirements
 
@@ -70,5 +62,7 @@ Library documentation is available from the links on the Knowledgebase.
 ## Location
 
 The local files are located at E:\GitHub\Arduino\Arduino-IR-Task
+
+
 
 **John Fletcher (M6777)**
