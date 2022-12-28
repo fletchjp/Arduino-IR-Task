@@ -51,7 +51,15 @@ I have now had a further look at FreeRTOS as I wanted to compare its use with wo
 
 ### frt_Blink_AnalogRead
 
-This is an example using frt which is a wrapper library for FreeRTOS,
+This is an example using frt which is a wrapper library for FreeRTOS.
+
+### frt_Read_and_Blink_stop
+
+This is another frt example written to help solve a problem with one of the RS485 cases which was crashing.
+
+I made this one to use a different way to trigger a task to flash LEDs.
+
+There is nothing like this in the frt examples.
 
 ## Requirements
 
