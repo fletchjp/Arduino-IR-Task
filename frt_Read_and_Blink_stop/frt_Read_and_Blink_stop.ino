@@ -32,10 +32,13 @@ namespace
 		unsigned int remainder = 0;
 	};
 
+	// Create the static BlinkTask instance
+	BlinkTask blink_task;
+
 	// Define the analog read task and implement run().
 	// - 84 is the stack size in bytes
 	class SerialReadTask final :
-		public frt::Task<SerialReadTask, 84>
+		public frt::Task<SerialReadTask>
 	{
 	public:
 		bool run()
@@ -45,13 +48,15 @@ namespace
         char c = Serial.read();
 
         switch (c) {
-            Serial.print(c);
+            
             case 'A':
               blink_task.start(2);
               Serial.println("starting blink_task");
               break;
 
-            default:
+            default:              
+              //Serial.print(c);
+              break;
         }
       }
 
@@ -64,8 +69,6 @@ namespace
 		unsigned int remainder = 0;
 	};
 
-	// Create the static BlinkTask instance
-	BlinkTask blink_task;
 	// Create the static AnalogReadTask instance
 	SerialReadTask serial_read_task;
 
@@ -79,10 +82,10 @@ void setup()
 
 	while (!Serial);
 
-	// Start the blink task with priority 1
-	blink_task.start(1);
-	// Start the analog read task with higher priority 2
-	serial_read_task.start(2);
+	// Start the blink task with priority 2
+	//blink_task.start(2);
+	// Start the analog read task with higher priority 1
+	serial_read_task.start(1);
 }
 
 // This is called by the idle task (at the lowest priority 0)
@@ -91,12 +94,13 @@ void loop()
 	static bool stopped = false;
 
 	// Stop analog read task after 5s
+  /*
 	if (!stopped && millis() > 5000) {
 		// Get the stack size used this time. This varies from run to
 		// run due to interrupts being served while the analog read task
 		// was running. Don't be too conservative!
 		Serial.print(F("AnalogReadTask used "));
-		Serial.print(analog_read_task.getUsedStackSize());
+		Serial.print(blink_read_task.getUsedStackSize());
 		Serial.println(F(" bytes of stack this time."));
 
 		Serial.println(F("Stopping"));
@@ -104,4 +108,5 @@ void loop()
 		Serial.println(F("Stopped"));
 		stopped = true;
 	}
+  */
 }
