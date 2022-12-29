@@ -61,7 +61,9 @@ namespace
       }
 
 			msleep(100, remainder);
-
+      Serial.print(F("Blink task "));
+      Serial.print(blink_task.getUsedStackSize());
+      Serial.println(F(" bytes of stack this time."));
 			return true;
 		}
 
@@ -91,7 +93,7 @@ void setup()
 // This is called by the idle task (at the lowest priority 0)
 void loop()
 {
-	static bool stopped = false;
+	//static bool stopped = false;
 
 	// Stop analog read task after 5s
   /*
