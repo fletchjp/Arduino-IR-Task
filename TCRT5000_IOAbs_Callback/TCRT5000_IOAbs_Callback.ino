@@ -11,8 +11,21 @@
 // This compiles on UNO and also DUE.
 // It also compiles on a PICO - I have not checked that the pin numbers are correct.
 
+// 3rd party libraries
+#include <Streaming.h>
 #include <IoAbstraction.h>
 #include <TaskManagerIO.h>
+
+const byte VER_MAJ  = 1;
+const byte VER_MIN  = 0;
+const byte VER_DETAIL = 0;
+
+void heading()
+{
+  Serial << endl << endl << __FILE__ << endl;
+  Serial << F("Ver: ") << VER_MAJ << F(".") << VER_MIN << F(".") << VER_DETAIL;
+  Serial << F(" compiled on ") << __DATE__ << F(" at ") << __TIME__ << F(" using compiler ") << __cplusplus << endl;
+}
 
 IoAbstractionRef arduinoPins = ioUsingArduino();
 
@@ -37,7 +50,9 @@ void checkIR()
 }
 
 void setup() {
-  Serial.begin(9600);
+  while(!Serial);
+  Serial.begin(115200);
+  heading();
 
 	ioDevicePinMode(arduinoPins, Signal_Pin, INPUT_PULLUP);
   ioDevicePinMode(arduinoPins, IR_Pin, OUTPUT);
