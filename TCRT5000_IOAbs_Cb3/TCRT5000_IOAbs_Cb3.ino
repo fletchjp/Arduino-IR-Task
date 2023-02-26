@@ -14,8 +14,21 @@
 ///
 /// This compiles on UNO and also DUE.
 
+// 3rd party libraries
+#include <Streaming.h>
 #include <IoAbstraction.h>
 #include <TaskManagerIO.h>
+
+const byte VER_MAJ  = 1;
+const byte VER_MIN  = 0;
+const byte VER_DETAIL = 0;
+
+void heading()
+{
+  Serial << endl << endl << __FILE__ << endl;
+  Serial << F("Ver: ") << VER_MAJ << F(".") << VER_MIN << F(".") << VER_DETAIL;
+  Serial << F(" compiled on ") << __DATE__ << F(" at ") << __TIME__ << F(" using compiler ") << __cplusplus << endl;
+}
 
 /// arduinoPins is using part of IoAbstraction
 IoAbstractionRef arduinoPins = ioUsingArduino();
@@ -54,7 +67,9 @@ CheckIRpins checkThesePins(Signal_Pin, LED_Pin);
 
 /// Arduino setup routine runs once.
 void setup() {
-  Serial.begin(9600);
+  while(!Serial);
+  Serial.begin (115200);
+  heading();
 
 	ioDevicePinMode(arduinoPins, Signal_Pin, INPUT_PULLUP);
   ioDevicePinMode(arduinoPins, IR_Pin, OUTPUT);
