@@ -6,7 +6,20 @@
 // This version is using FreeRTOS
 // https://www.arduino.cc/reference/en/libraries/freertos/
 
+// 3rd party libraries
+#include <Streaming.h>
 #include <Arduino_FreeRTOS.h>
+
+const byte VER_MAJ  = 1;
+const byte VER_MIN  = 0;
+const byte VER_DETAIL = 0;
+
+void heading()
+{
+  Serial << endl << endl << __FILE__ << endl;
+  Serial << F("Ver: ") << VER_MAJ << F(".") << VER_MIN << F(".") << VER_DETAIL;
+  Serial << F(" compiled on ") << __DATE__ << F(" at ") << __TIME__ << F(" using compiler ") << __cplusplus << endl;
+}
 
 void TaskDigitalRead( void *pvParameters );
 
@@ -19,7 +32,9 @@ int ir_signal = 0;
 int previous_signal = -1;
 
 void setup() {
+  while(!Serial);
   Serial.begin(115200);
+  heading();
   // put your setup code here, to run once:
   pinMode(Signal_Pin, INPUT_PULLUP);
   pinMode(IR_Pin, OUTPUT);                                                                                                                                        // with 330R
