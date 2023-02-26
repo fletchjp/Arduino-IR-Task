@@ -1,7 +1,20 @@
 //frt_Blink_AnalogRead.ino
 // This is an example of the use of the frt library to wrap Arduino_FreeRTOS
 
+// 3rd party libraries
+#include <Streaming.h>
 #include <frt.h>
+
+const byte VER_MAJ  = 1;
+const byte VER_MIN  = 0;
+const byte VER_DETAIL = 0;
+
+void heading()
+{
+  Serial << endl << endl << __FILE__ << endl;
+  Serial << F("Ver: ") << VER_MAJ << F(".") << VER_MIN << F(".") << VER_DETAIL;
+  Serial << F(" compiled on ") << __DATE__ << F(" at ") << __TIME__ << F(" using compiler ") << __cplusplus << endl;
+}
 
 namespace
 {
@@ -60,10 +73,9 @@ namespace
 void setup()
 {
 	pinMode(LED_BUILTIN, OUTPUT);
-
-	Serial.begin(9600);
-
-	while (!Serial);
+  while(!Serial);
+  Serial.begin (115200);
+  heading();
 
 	// Start the blink task with priority 1
 	blink_task.start(1);
