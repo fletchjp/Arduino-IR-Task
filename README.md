@@ -3,6 +3,10 @@
 # Arduino-IR-Task
 
  Examples codes for IR detection using TCRT 5000 detectors and various options for Task Scheduling.
+ 
+ The heading routine has been added to these codes so that there is a report on the Serial Monitor of the file installed with its version information.
+ 
+ All the files have been given version no 1.0.0 
 
 ## Introduction
 
